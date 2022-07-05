@@ -37,8 +37,7 @@ i {
   cursor: pointer;
 }
 
-.fa-solid, .fas {
-  font-family: "Font Awesome 6 Free";
+.fa-solid .fas {
   font-weight: 900;
   margin-top: 5px;
 }
