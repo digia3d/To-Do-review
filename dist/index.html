@@ -2,38 +2,25 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To Do List</title>
-    <script src="index.js" defer></script>
-    <link rel="stylesheet" href="style.css">
-    <script defer src="runtime.bundle.js"></script>
-    <script defer src="index.bundle.js"></script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://kit.fontawesome.com/1bb5d15b47.js" crossorigin="anonymous"></script>
+    <title>Title</title>
 <script defer src="runtime.js"></script><script defer src="index.js"></script></head>
 
 <body>
-
-    <section class="todo">
-        <div class="container">
-            <div class="todoContent" id="list-container">
-
-                <div class="todoHeader">
-                    <h1 class="todoTitle">Today's To Do</h1>
-                    <i class="fa-solid fa-rotate fa-lg font-awesome-icon" id="icon"></i>
-                </div>
-
-                <div class="inputField">
-                    <input type="text" class="add" placeholder="Add to your list...">
-                    <i class="fa-solid fa-circle-plus"></i>
-                </div>
-
-                <div class="todoTasks"></div>
-
-                <button type="button" class="clearAllC" id="clear">Clear all completed</button>
-            </div>
+    <div id="list-container">
+        <div class="list-head">
+            <p class="todo">Today's To Do List</p>
+            <i id="icon" class="fa-solid fa-rotate fa-lg font-awesome-icon"></i>
         </div>
-    </section>
+        <input type="text" class="input" name="addtext" placeholder="Add to your list..." />
+        <div id="list-body"></div>
+        <div class="button" id="clear">
+            <button>Clear all completed</button>
+        </div>
+    </div>
 </body>
 
 </html>

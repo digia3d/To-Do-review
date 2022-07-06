@@ -1,73 +1,92 @@
-body {
-  background-color: rgb(207, 207, 207);
-  font-family: 'lato', sans-serif;
+/* CSS */
+
+html {
+  box-sizing: border-box;
 }
 
-.todoHeader {
-  display: flex;
+#list-container {
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  padding: 0 15px;
-  border-bottom: 1px solid rgb(212, 212, 212);
-}
-
-.inputField {
-  display: flex;
-  width: 100%;
-  border-bottom: 1px solid rgb(212, 212, 212);
-}
-
-.todo {
-  max-width: 600px;
-  background-color: #ffff;
-  margin: 150px auto;
-  border-radius: 8px;
-}
-
-.add {
-  width: 95%;
   margin: 0 auto;
+  border: 1px solid rgba(220, 220, 220, 1);
+  width: 500px;
+  max-width: 500px;
+  background-color: white;
+  box-shadow: 0 0 30px rgba(150, 150, 150, 0.25);
+}
+
+.list-head {
+  display: flex;
+  margin: 0;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid rgba(220, 220, 220, 1);
+  padding: 0 1rem;
+}
+
+#icon {
+  color: gray;
+}
+
+.input {
   border: none;
-  padding: 10px;
+  font-size: 1rem;
+  padding: 1rem 1rem;
+  font-style: italic;
+}
+
+.list {
+  display: flex;
+  align-items: baseline;
+  border-bottom: 1px solid rgba(220, 220, 220, 1);
+  border-top: 1px solid rgba(220, 220, 220, 1);
+  padding: 1rem 1rem;
+}
+
+.list p {
+  margin-left: 1rem;
 }
 
 i {
-  font-size: 25px;
-  margin-right: 10px;
+  margin-left: auto;
+  color: gray;
+}
+
+.hide {
+  display: none;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid rgba(220, 220, 220, 1);
+  background-color: rgb(238, 238, 238);
+}
+
+button {
+  border: none;
+  color: gray;
+  font-size: 1rem;
   cursor: pointer;
 }
 
-.fa-solid .fas {
-  font-weight: 900;
-  margin-top: 5px;
+.edit {
+  background-color: rgba(255, 235, 205);
 }
 
-.task {
-  display: flex;
-  justify-content: space-between;
-  gap: 10px;
-  padding: 10px 0;
-  border-bottom: 1px solid rgb(212, 212, 212);
+.edit input {
+  border: none;
+  background-color: rgba(255, 235, 205);
+  font-size: 1rem;
+  margin-left: 1rem;
 }
 
-.description {
-  font-size: 20px;
-  flex-grow: 1;
-}
-
-:focus {
+input:focus {
   outline: none;
 }
 
-.dots {
-  font-size: 20px;
-  margin-right: 10px;
-}
-
-.clearAllC {
-  height: 40px;
-  border: none;
-  background-color: rgb(235, 235, 235);
-  font-size: 15px;
-  width: 100%;
+.strike {
+  text-decoration: line-through;
 }
