@@ -1,24 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To Do List</title>
-    <script src="index.js" defer ></script>
+    <script src="index.js" defer></script>
     <link rel="stylesheet" href="style.css">
-    <script src="https://unpkg.com/lodash@4.17.20"></script>
+    <script defer src="runtime.bundle.js"></script>
+    <script defer src="index.bundle.js"></script>
     <script src="https://kit.fontawesome.com/1bb5d15b47.js" crossorigin="anonymous"></script>
-<script defer src="/runtime.bundle.js"></script><script defer src="/index.bundle.js"></script></head>
+    <script defer src="/runtime.bundle.js"></script>
+    <script defer src="/index.bundle.js"></script>
+</head>
+
 <body>
 
     <section class="todo">
         <div class="container">
             <div class="todoContent" id="list-container">
 
-                    <div class="todoHeader">
-                        <h1 class="todoTitle">Today's To Do</h1>
-                        <i class="fa-solid fa-rotate fa-lg font-awesome-icon" id="icon"></i>
-                    </div>
+                <div class="todoHeader">
+                    <h1 class="todoTitle">Today's To Do</h1>
+                    <i class="fa-solid fa-rotate fa-lg font-awesome-icon" id="icon"></i>
+                </div>
 
                 <div class="inputField">
                     <input type="text" class="add" placeholder="Add to your list...">
@@ -32,4 +37,5 @@
         </div>
     </section>
 </body>
+
 </html>
