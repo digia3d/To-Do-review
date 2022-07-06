@@ -4,6 +4,11 @@ export default class localStorage {
   }
 
   setItems = (obj) => {
-    localStorage.setItems('taskList', JSON)
-  }
+    localStorage.setItems('taskList', JSON.stringify(obj));
+  };
+
+  getItems = () => {
+    this.store = JSON.parse(localStorage.getItems('taskList') || '[]');
+    return this.store;
+  };
 }

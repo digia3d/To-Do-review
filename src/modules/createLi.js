@@ -1,26 +1,20 @@
-const data = [
-  {
-    index: 1,
-    description: 'Cook lunch',
-    completed: true,
-  },
-  {
-    index: 2,
-    description: 'Clean house',
-    completed: true,
-  },
-  {
-    index: 3,
-    description: 'Wash dishes',
-    completed: false,
-  },
-  {
-    index: 4,
-    description: 'Feed cat',
-    completed: true,
-  },
-];
+const createLi = (newTask) => {
+  const li = document.createElement('li');
+  const checkbox = document.createElement('input');
+  const description = document.createElement('input');
+  const i = document.createElement('i');
+  description.type = 'text';
+  description.value = `${newTask.description}`;
+  description.desabled = true;
+  checkbox.type = 'checkbox';
+  i.classList.add('fa-solid', 'fa-ellipsis-vertical');
+  li.classList.add(newTask.id);
+  li.append(checkbox, description, i);
+  document.querySelector('.taskList').prepend(li);
+  if (newTask.completed) {
+    checkbox.checked = true;
+    li.classList.add('checked');
+  }
+};
 
-
-
-export default data;
+export default createLi;
