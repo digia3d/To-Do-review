@@ -1,4 +1,4 @@
-class ToDoList {
+export default class addTask {
   constructor() {
     this.getTasks();
   }
@@ -71,5 +71,3 @@ class ToDoList {
       this.updateTasks();
     }
 }
-
-export default ToDoList;
