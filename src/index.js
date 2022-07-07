@@ -1,19 +1,19 @@
 // CSS style
 import './style.css';
-import toDoList from './modules/addTask.js';
+import ToDoList from './modules/addTask.js';
 import * as Element from './modules/items.js';
 
-const newTask = new toDoList();
+const newTask = new ToDoList();
 
 const getCheck = (element) => `${element.completed
-    ? ` <input type= "checkbox" aria-label="${element.index}" data-name="status" name="check" checked>`
-    : `<input type="checkbox" aria-label="${element.index}" data-name="status" name="check">`
-  }`;
+  ? ` <input type= "checkbox" aria-label="${element.index}" data-name="status" name="check" checked>`
+  : `<input type="checkbox" aria-label="${element.index}" data-name="status" name="check">`
+}`;
 
 const showTaskItem = (element) => `<div class="list show">
 ${getCheck(element)}
 <p class="taskdescription ${element.completed ? 'strike' : ''
-  } " > ${element.description}</p>
+} " > ${element.description}</p>
 <i class="fa fa-ellipsis-v fa-2x menu-icon" aria-label="${element.index}"
 data-name="edit"></i>
 </div>`;
@@ -53,8 +53,8 @@ Element.listBody.addEventListener('click', (e) => {
       newTask.setEdit(e.target.ariaLabel);
       refresh();
     } else if (e.target.dataset.name === 'delete') {
-newTask.removeTask(parseInt(e.target.ariaLabel, 10));
-refresh();
+      newTask.removeTask(parseInt(e.target.ariaLabel, 10));
+      refresh();
     }
   }
 });
