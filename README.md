@@ -23,6 +23,9 @@ This project is part of the Microverse curriculum. The main objective is to unde
 - Stylelint
 - Eslint
 
+## Live Demo
+https://digia3d.github.io/To-Do-List/
+
 ## Getting Started
 
 To get a local copy of this project:
